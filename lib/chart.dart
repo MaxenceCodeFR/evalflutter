@@ -14,7 +14,10 @@ class OrderStatusChart extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Text('Order Status', style: TextStyle(color: Colors.white, fontSize: 15),),
+              Text(
+                'Order Status',
+                style: TextStyle(color: Colors.white, fontSize: 15),
+              ),
               Container(
                 height: 200,
                 width: 200,
@@ -44,6 +47,35 @@ class OrderStatusChart extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Indicator(
+                    color: Colors.yellow,
+                    text: 'Packaging',
+                    isSquare: false,
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Indicator(
+                    color: Colors.blue,
+                    text: 'Delivered',
+                    isSquare: false,
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Indicator(
+                    color: Colors.green,
+                    text: 'Completed',
+                    isSquare: false,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -51,6 +83,50 @@ class OrderStatusChart extends StatelessWidget {
     );
   }
 }
+/////////////////////////////////////////////
+//J'AVOUE QUE J'AI PAS COMPRIS CETTE PARTIE//
+//Mais je voulais absolument mettre les indicators//
+///////////////////////////////////////////
+class Indicator extends StatelessWidget {
+  final Color color;
+  final String text;
+  final bool isSquare;
+  final double size;
+  final Color textColor;
+
+  const Indicator({
+    Key? key,
+    required this.color,
+    required this.text,
+    this.isSquare = true,
+    this.size = 16,
+    this.textColor = const Color(0xffffffff),
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Container(
+          width: size,
+          height: size,
+          decoration: BoxDecoration(
+            shape: isSquare ? BoxShape.rectangle : BoxShape.circle,
+            color: color,
+          ),
+        ),
+        const SizedBox(
+          width: 4,
+        ),
+        Text(
+          text,
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
+        )
+      ],
+    );
+  }
+}
+
 
 class TopSellingProductsChart extends StatelessWidget {
   @override
