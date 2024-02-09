@@ -50,7 +50,7 @@ class OrderStatusChart extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -147,7 +147,7 @@ class TopSellingProductsChart extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

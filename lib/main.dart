@@ -52,7 +52,6 @@ class DashboardScreen extends StatelessWidget {
                               maxWidth: 350, // Définissez la largeur maximale de la Card ici.
                             ),
                             child: Container(
-
                               child: Card(
                                 color: Color.fromRGBO(42, 45, 62, 1),
                                 shape: RoundedRectangleBorder(
@@ -73,10 +72,19 @@ class DashboardScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  DashboardCenterContent(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(top: 30, bottom: 15, left: 10),
+                          child: Text('Orders',style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),)
+                      ),
+                      DashboardCenterContent(),
+                    ],
+                  ),
                   Container(
                     constraints: BoxConstraints(
-                      maxHeight: 350
+                      maxHeight: 370
                     ),
                     child: Expanded(
                       child: Row(
