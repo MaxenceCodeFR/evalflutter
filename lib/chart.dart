@@ -8,7 +8,7 @@ class OrderStatusChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
+      margin: EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 5),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
         color: Color.fromRGBO(42, 45, 62, 1),
@@ -93,7 +93,7 @@ class TopSellingProductsChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
+      margin: EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 10),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
         color: Color.fromRGBO(42, 45, 62, 1),
