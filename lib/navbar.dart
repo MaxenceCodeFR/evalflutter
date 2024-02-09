@@ -18,6 +18,7 @@ class NavigationSidebar extends StatelessWidget {
                   child: Text('E', style: TextStyle(fontSize: 70, color: Colors.white,),) ,)
             ),
           ),
+          Divider(thickness: 2,color: Colors.white12),
           ListTile(
             leading: Icon(Icons.dashboard, color: Colors.white),
             title: Text('Dashboard', style: TextStyle(color: Colors.white)),

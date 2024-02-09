@@ -49,7 +49,7 @@ class DashboardScreen extends StatelessWidget {
                         Flexible(
                           child: Container(
                             constraints: BoxConstraints(
-                              maxWidth: 350, // Définissez la largeur maximale de la Card ici.
+                              maxWidth: 350,
                             ),
                             child: Container(
                               child: Card(

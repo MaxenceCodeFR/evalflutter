@@ -9,10 +9,10 @@ class DashboardCenterContent extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          _buildCard(context, 'All Orders', 5, Colors.cyan, 0.8),
-          _buildCard(context, 'Packaging', 3, Colors.yellow, 0.5),
+          _buildCard(context, 'All Orders', 5, Colors.cyan,1),
+          _buildCard(context, 'Packaging', 3, Colors.yellow, 0.6),
           _buildCard(context, 'Delivered', 1, Colors.blue, 0.2),
-          _buildCard(context, 'Completed', 1, Colors.green, 0.1),
+          _buildCard(context, 'Completed', 1, Colors.green, 0.2),
         ],
       ),
     );
@@ -34,7 +34,19 @@ class DashboardCenterContent extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.file_copy, color: color),
+                  Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: color.withAlpha(20),
+                            spreadRadius: 10,
+                            blurRadius: 0,
+                          ),
+                        ],
+                      ),
+                      child: Icon(Icons.file_copy, color: color)
+                  ),
                   Icon(Icons.more_vert, color: Colors.grey,)
                 ],
               ),
